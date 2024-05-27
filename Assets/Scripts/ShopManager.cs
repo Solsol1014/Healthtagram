@@ -41,7 +41,7 @@ public class ShopManager : MonoBehaviour {
     void Start() {
         characterPanel.SetActive(true);
         spacePanel.SetActive(false);
-        shopPanel.SetActive(false);
+        shopPanel.SetActive(true);
         gotoSpaceBtn.SetActive(true);
         gotoCharBtn.SetActive(false);
 

@@ -9,6 +9,7 @@ public class ShopShow : MonoBehaviour
     public Button hideShopButton;
     public GameObject setShowButton;
     public GameObject Shop;
+    public GameObject SpacePanel;
 
     public Animator shopAni;
     public Animator cameraAni;
@@ -16,7 +17,7 @@ public class ShopShow : MonoBehaviour
     private bool isShopOpen = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         showShopButton.onClick.AddListener(ToggleShop);
         hideShopButton.onClick.AddListener(ToggleShop);
@@ -31,6 +32,9 @@ public class ShopShow : MonoBehaviour
         if (isShopOpen)
         {
             ShowShop();
+            setShowButton.SetActive(false);
+            shopAni.SetBool("ButtonPush", true);
+            cameraAni.SetBool("ButtonPush", true);
         }
         else
         {
@@ -42,8 +46,6 @@ public class ShopShow : MonoBehaviour
     private void ShowShop()
     {
         Shop.SetActive(true);
-        setShowButton.SetActive(false);
-        shopAni.SetBool("ButtonPush", true);
-        cameraAni.SetBool("ButtonPush", true);
+        SpacePanel.SetActive(false);
     }
 }
