@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Exercise.unity
     guid: 5619cc2e7c0e948289edb03e80227cec
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 8267c6e1466dc4618af3c98ddbd2e644, type: 2}
