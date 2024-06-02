@@ -67,6 +67,7 @@
     <Compile Include="Assets/Scripts/Shop/HideShop.cs" />
     <Compile Include="Assets/Scripts/Shop/SpaceItems.cs" />
     <Compile Include="Assets/Scripts/Shop/ShopManage.cs" />
+    <Compile Include="Assets/Scripts/Websocket/EmojiSend.cs" />
     <Compile Include="Assets/Scripts/Shop/ShopUI.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
     <Compile Include="Assets/Scripts/Shop/Inventory.cs" />
@@ -77,8 +78,8 @@
     <Compile Include="Assets/Scripts/UI Buttons/StartButton.cs" />
     <Compile Include="Assets/Scripts/Shop/ShopButtons.cs" />
     <Compile Include="Assets/Scripts/ExerciseScene/StartExercise.cs" />
+    <Compile Include="Assets/Scripts/Bodies/GetBodyType.cs" />
     <Compile Include="Assets/Scripts/ToggleVisibility.cs" />
-    <Compile Include="Assets/Scripts/Websocket/Example.cs" />
     <Compile Include="Assets/Scripts/Websocket/WebSocketClient.cs" />
     <Compile Include="Assets/Scripts/Shop/UpdateMoney.cs" />
   </ItemGroup>

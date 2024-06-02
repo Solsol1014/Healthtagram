@@ -27,7 +27,8 @@ public class Bodychange : MonoBehaviour
         girl.SetActive(false);
         girlfat.SetActive(false);
         activeModel.SetActive(true);
-        Inventory.instance.UpdateSkin();
+        GetBodyType temp = FindObjectOfType<GetBodyType>();
+        temp.UpdateSkin();
     }
 
     void CalculateBMI()

@@ -1,34 +1,49 @@
 ﻿<Properties StartupConfiguration="{18BB54E7-2F61-AB98-E6F9-86693F87D538}|">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Bodies/Bodychange.cs">
     <Files>
-      <File FileName="Assets/Scripts/ShopShow.cs" Line="49" Column="37" />
-      <File FileName="Assets/Scripts/Item.cs" Line="12" Column="30" />
-      <File FileName="Assets/Scripts/Inventory.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Shop.cs" Line="27" Column="6" />
-      <File FileName="Assets/Scripts/ShopDatabase.cs" Line="16" Column="12" />
+      <File FileName="Assets/Websocket/WebSocketClient.cs" Line="27" Column="44" />
+      <File FileName="Assets/Websocket/Example.cs" Line="20" Column="59" />
+      <File FileName="Assets/Scripts/ShopShow.cs" />
+      <File FileName="Assets/Scripts/Item.cs" />
+      <File FileName="Assets/Scripts/Inventory.cs" Line="30" Column="42" />
+      <File FileName="Assets/Scripts/ShopDatabase.cs" />
       <File FileName="Assets/Scripts/HideShop.cs" Line="11" Column="23" />
       <File FileName="Assets/Scripts/ShopButtons.cs" Line="17" Column="53" />
-      <File FileName="Assets/Scripts/ShopUI.cs" Line="18" Column="38" />
-      <File FileName="Assets/Scripts/UpdateMoney.cs" Line="13" Column="25" />
+      <File FileName="Assets/Scripts/ShopUI.cs" />
+      <File FileName="Assets/Scripts/UpdateMoney.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/ExerciseScene/StartExercise.cs" Line="18" Column="33" />
+      <File FileName="Assets/Scripts/UI Buttons/Buttons.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI Buttons/StartButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI Buttons/Loading.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Shop/ShopManage.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/Bodies/Bodychange.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/HideObjectInEditor.cs" Line="37" Column="12" />
+      <File FileName="Assets/Scripts/Editor/ToggleVisibilityEditor.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/ToggleVisibility.cs" Line="7" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Healthtagram">
+          <Node name="Healthtagram" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Prefab" expanded="True" />
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Bodies" expanded="True" />
+                <Node name="Editor" expanded="True" />
+                <Node name="ExerciseScene" expanded="True" />
+                <Node name="Shop" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="567d524b-0c38-4d02-a940-06a4a84c1ad7" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="76ac6c0d-3194-4fbf-9c6e-3bd21fdd5ddf" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

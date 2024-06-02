@@ -5,7 +5,21 @@ using WebSocketSharp;
 
 public class WebSocketClient : MonoBehaviour
 {
+    public static WebSocketClient instance { get; private set; }
     WebSocket ws;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {

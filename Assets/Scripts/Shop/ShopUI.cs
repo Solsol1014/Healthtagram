@@ -19,7 +19,7 @@ public class ShopUI : MonoBehaviour
 
         foreach (var item in items)
         {
-            Debug.Log("print");
+            // Debug.Log("print");
             GameObject itemObj = Instantiate(itemTemplate, gameObject.transform);
             itemObj.SetActive(true);
             itemObj.transform.GetChild(0).GetComponent<Image>().sprite = item.icon;

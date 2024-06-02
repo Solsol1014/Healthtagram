@@ -20,21 +20,8 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        UpdateSkin();
-    }
-
-    public void UpdateSkin()
-    {
-        foreach (Transform child in parentObject.transform)
-        {
-            if (child.gameObject.activeSelf)
-            {
-                skin = child.gameObject;
-                break;
-            }
-        }
-
-        Debug.Log(skin.name);
+        GetBodyType temp = FindObjectOfType<GetBodyType>();
+        temp.UpdateSkin();
     }
 
     public int GetMoney()
@@ -49,6 +36,5 @@ public class Inventory : MonoBehaviour
 
     int money = 10000;
     public List<Item> items = new List<Item>();
-    GameObject skin;
-    public GameObject parentObject;
+    public GameObject skin;
 }

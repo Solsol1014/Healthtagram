@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 378855903}
   - component: {fileID: 378855904}
   m_Layer: 0
-  m_Name: Space
+  m_Name: ShopSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  parentObject: {fileID: 648986838}
+  skin: {fileID: 0}
 --- !u!1 &494604033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,7 +3427,7 @@ GameObject:
   - component: {fileID: 1204539308}
   - component: {fileID: 1204539309}
   m_Layer: 0
-  m_Name: Character
+  m_Name: ShopCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5199,6 +5199,7 @@ Transform:
   m_Children:
   - {fileID: 2006583081}
   - {fileID: 269225316}
+  - {fileID: 2138556931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939263037
@@ -5918,6 +5919,51 @@ Transform:
   - {fileID: 246747980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2138556930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138556931}
+  - component: {fileID: 2138556932}
+  m_Layer: 0
+  m_Name: GetBodyTypeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138556931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138556930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903057231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138556932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138556930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8955218b36a0a48bcb148d97e10767e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 648986838}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

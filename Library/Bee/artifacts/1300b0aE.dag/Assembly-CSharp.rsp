@@ -365,6 +365,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Bodies/Bodychange.cs"
+"Assets/Scripts/Bodies/GetBodyType.cs"
 "Assets/Scripts/ExerciseScene/StartExercise.cs"
 "Assets/Scripts/Shop/CharacterItems.cs"
 "Assets/Scripts/Shop/HideShop.cs"
@@ -382,7 +383,7 @@
 "Assets/Scripts/UI Buttons/Buttons.cs"
 "Assets/Scripts/UI Buttons/Loading.cs"
 "Assets/Scripts/UI Buttons/StartButton.cs"
-"Assets/Scripts/Websocket/Example.cs"
+"Assets/Scripts/Websocket/EmojiSend.cs"
 "Assets/Scripts/Websocket/WebSocketClient.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
