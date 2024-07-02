@@ -9,6 +9,7 @@ public class ShopShow : MonoBehaviour
     public Button hideShopButton;
     public GameObject setShowButton;
     public GameObject Shop;
+    public GameObject characterPanel;
     public GameObject SpacePanel;
 
     public Animator shopAni;
@@ -47,5 +48,6 @@ public class ShopShow : MonoBehaviour
     {
         Shop.SetActive(true);
         SpacePanel.SetActive(false);
+        characterPanel.SetActive(true);
     }
 }

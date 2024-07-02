@@ -8,27 +8,35 @@ using TMPro;
 
 public class Bodychange : MonoBehaviour
 {
-    public GameObject girlskinny;
-    public GameObject girl;
-    public GameObject girlfat;
     [SerializeField] private TMP_InputField heightInput;
     [SerializeField] private TMP_InputField weightInput;
     public Button submitButton;
+    public GameObject placeModel;
+    public SpaceChange spaceChange;
 
     private void Start()
     {
         submitButton.onClick.AddListener(CalculateBMI);
-        SetActiveModel(girl);
+        if (Inventory.instance.bmiN<1)
+        {
+            SetActiveModel(Inventory.instance.characSkin.realCharacters[1]);
+        }
+        else
+        {
+            UpdateCharacter(Inventory.instance.bmiN);
+        }
+
+        spaceChange.SetSkin();
     }
 
     void SetActiveModel(GameObject activeModel)
     {
-        girlskinny.SetActive(false);
-        girl.SetActive(false);
-        girlfat.SetActive(false);
-        activeModel.SetActive(true);
-        GetBodyType temp = FindObjectOfType<GetBodyType>();
-        temp.UpdateSkin();
+        Instantiate(activeModel, placeModel.transform);
+        if (placeModel.transform.childCount>1)
+        {
+            Destroy(placeModel.transform.GetChild(0).gameObject);
+        }
+        //placeModel.SetActive(true);
     }
 
     void CalculateBMI()
@@ -36,38 +44,49 @@ public class Bodychange : MonoBehaviour
         float height = float.Parse(heightInput.text) / 100.0f; // Convert cm to meters
         float weight = float.Parse(weightInput.text);
         float bmi = weight / (height * height);
+        Inventory.instance.bmiN = bmi;
 
         UpdateCharacter(bmi);
     }
 
     void UpdateCharacter(float bmi)
     {
-        GameObject activeModel = girl;
-        float baseYScale = 1.0f; // �⺻ y�� ������ ��
-        float baseZScale = 1.0f; // �⺻ z�� ������ ��
-        float xScale = 1.0f; // �ʱ� x�� ������ ��
+        GameObject activeModel = Inventory.instance.characSkin.realCharacters[1];
+        float baseYScale = 0.9f; // �⺻ y�� ������ ��
+        float baseZScale = 0.9f; // �⺻ z�� ������ ��
+        float xScale = 0.9f; // �ʱ� x�� ������ ��
 
         if (bmi < 18.5)
         {
-            activeModel = girlskinny;
+            activeModel = Inventory.instance.characSkin.realCharacters[0];
             // BMI�� ���� x�� ������ ����: 0.9 ~ 1.0 ������ ������ 2.2��� ����
-            xScale *= 0.9f + (bmi - 16) / (18.5f - 16) * 0.1f;
+            float scale = 0.9f + (bmi - 16) / (18.5f - 16) * 0.1f;
+            xScale *= scale;
+            Inventory.instance.scale = scale;
+            Inventory.instance.bmi = "skinny";
         }
         else if (bmi < 25)
         {
-            activeModel = girl;
+            activeModel = Inventory.instance.characSkin.realCharacters[1];
             // BMI 18.5 ~ 25 ���̿��� x�� ������ 2.2 ~ 2.64 ���� (1.0 ~ 1.2��)
-            xScale *= 1.0f + (bmi - 18.5f) / (25 - 18.5f) * 0.2f;
+            float scale = 1.0f + (bmi - 18.5f) / (25 - 18.5f) * 0.2f;
+            xScale *= scale;
+            //xScale *= 1.0f;
+            Inventory.instance.scale = scale;
+            Inventory.instance.bmi = "normal";
         }
         else
         {
-            activeModel = girlfat;
+            activeModel = Inventory.instance.characSkin.realCharacters[2];
             // BMI 25 �̻󿡼� x�� ������ 2.64 ~ 3.3 ���� (1.2 ~ 1.5��)
-            xScale *= 1.2f + (bmi - 25) / (30 - 25) * 0.3f;
+            float scale = 1.2f + (bmi - 25) / (30 - 25) * 0.3f;
+            xScale *= scale;
+            Inventory.instance.scale = scale;
+            Inventory.instance.bmi = "fat";
         }
 
         SetActiveModel(activeModel);
-        activeModel.transform.localScale = new Vector3(xScale, baseYScale, baseZScale); // ��ü �� ������ ����
+        placeModel.transform.localScale = new Vector3(xScale, baseYScale, baseZScale); // ��ü �� ������ ����
 
     }
 

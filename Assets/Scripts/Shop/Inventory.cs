@@ -20,8 +20,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        GetBodyType temp = FindObjectOfType<GetBodyType>();
-        temp.UpdateSkin();
+
     }
 
     public int GetMoney()
@@ -36,5 +35,11 @@ public class Inventory : MonoBehaviour
 
     int money = 10000;
     public List<Item> items = new List<Item>();
-    public GameObject skin;
+    public Item characSkin;
+    public Item spaceSkin;
+    public string bmi = "normal";
+    public float scale;
+    public float bmiN = 0;
+    public bool isExercise = false;
+    public string exercise = "running";
 }

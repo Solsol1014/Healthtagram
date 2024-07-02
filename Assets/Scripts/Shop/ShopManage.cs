@@ -10,7 +10,7 @@ public class ShopManage : MonoBehaviour
         instance = this;
     }
 
-    public static void buy(Item item)
+    public static bool Buy(Item item)
     {
         if (!Inventory.instance.items.Contains(item))
         {
@@ -18,11 +18,18 @@ public class ShopManage : MonoBehaviour
             {
                 Inventory.instance.EditMoney(-item.price);
                 Inventory.instance.items.Add(item);
+                return true;
             }
             else
+            {
                 Debug.Log("No money");
+                return false;
+            }
         }
         else
+        {
             Debug.Log("Already Exist");
+            return false;
+        }
     }
 }

@@ -8,12 +8,16 @@ public class ShopDatabase : MonoBehaviour
 
     private List<string> itemname;
 
+    public bool isCharacter;
+    public bool isSpace;
+
     private void Start()
     {
-        //foreach (var item in items)
-        //{
-        //    itemname.Add(item.itemName);
-        //}
+        foreach (var item in items)
+        {
+            item.isCharacter = isCharacter;
+            item.isSpace = isSpace;
+        }
     }
 
     public int Price(string name)
